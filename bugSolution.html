@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv" style="display:none;">
+    This text will be hidden initially.
+  </div>
+  <script>
+    // Correctly manipulate the element before or after setting the display property
+    document.getElementById("myDiv").innerHTML = "<p>This text replaces the initial content.</p>";
+    document.getElementById("myDiv").style.color = "red";
+    document.getElementById("myDiv").style.display = "block"; 
+  </script>
+</body>
+</html>
